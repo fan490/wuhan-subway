@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetroDataset city="武汉市" crs="EPSG:4326" version="2026-course-demo">
+  <Metadata>
+    <Title>武汉地铁网络课程数据集</Title>
+    <Description>使用 XML 组织的武汉地铁站点、线路和换乘关系数据，可与 JSON 数据互相对应。</Description>
+  </Metadata>
+  <Lines>
+    <Line id="L2" name="2号线" color="#e85d3f" direction="天河机场 - 佛祖岭">
+      <StationRef id="tianhe_airport" />
+      <StationRef id="hankou_railway" />
+      <StationRef id="zhongshan_park" />
+      <StationRef id="jianghan_road" />
+      <StationRef id="jiyuqiao" />
+      <StationRef id="pangxiejia" />
+      <StationRef id="xiaoguishan" />
+      <StationRef id="hongshan_square" />
+      <StationRef id="zhongnan_road" />
+      <StationRef id="baotongsi" />
+      <StationRef id="jiedaokou" />
+      <StationRef id="guangbutun" />
+      <StationRef id="huquan" />
+      <StationRef id="guanggu_square" />
+      <StationRef id="wuhan_east" />
+    </Line>
+    <Line id="L4" name="4号线" color="#43b85c" direction="武汉火车站 - 柏林">
+      <StationRef id="wuhan_railway" />
+      <StationRef id="tieji_road" />
+      <StationRef id="yuejiazui" />
+      <StationRef id="qingyuzui" />
+      <StationRef id="chuhan_street" />
+      <StationRef id="hongshan_square" />
+      <StationRef id="zhongnan_road" />
+      <StationRef id="meiyuanxiaoqu" />
+      <StationRef id="wuchang_railway" />
+      <StationRef id="shouyi_road" />
+      <StationRef id="fuxing_road" />
+      <StationRef id="zhongjiacun" />
+    </Line>
+    <Line id="L7" name="7号线" color="#f0bb2f" direction="园博园北 - 青龙山地铁小镇">
+      <StationRef id="xujiapeng" />
+      <StationRef id="hubei_university" />
+      <StationRef id="xinhe_street" />
+      <StationRef id="pangxiejia" />
+      <StationRef id="xiaodongmen" />
+      <StationRef id="wuchang_railway" />
+      <StationRef id="ruian_street" />
+      <StationRef id="jianan_street" />
+      <StationRef id="hubei_univ_tech" />
+    </Line>
+    <Line id="L8" name="8号线" color="#25b6b6" direction="金潭路 - 军运村">
+      <StationRef id="yuejiazui" />
+      <StationRef id="shengbo_hubeiribao" />
+      <StationRef id="zhongnan_hospital" />
+      <StationRef id="hongshan_square" />
+      <StationRef id="zhongnan_road" />
+      <StationRef id="wuchang_railway" />
+      <StationRef id="wenzhi_street" />
+      <StationRef id="mahu" />
+    </Line>
+  </Lines>
+  <Stations>
+    <Station id="tianhe_airport" name="天河机场" district="黄陂区" lng="114.209" lat="30.784" category="airport_hub" />
+    <Station id="hankou_railway" name="汉口火车站" district="江汉区" lng="114.254" lat="30.618" category="rail_hub" />
+    <Station id="zhongshan_park" name="中山公园" district="江汉区" lng="114.268" lat="30.583" category="normal" />
+    <Station id="jianghan_road" name="江汉路" district="江汉区" lng="114.292" lat="30.579" category="commercial" />
+    <Station id="jiyuqiao" name="积玉桥" district="武昌区" lng="114.310" lat="30.562" category="normal" />
+    <Station id="pangxiejia" name="螃蟹岬" district="武昌区" lng="114.318" lat="30.551" category="transfer" />
+    <Station id="xiaoguishan" name="小龟山" district="武昌区" lng="114.323" lat="30.543" category="normal" />
+    <Station id="hongshan_square" name="洪山广场" district="武昌区" lng="114.336" lat="30.545" category="transfer" />
+    <Station id="zhongnan_road" name="中南路" district="武昌区" lng="114.339" lat="30.532" category="transfer" />
+    <Station id="baotongsi" name="宝通寺" district="武昌区" lng="114.344" lat="30.524" category="normal" />
+    <Station id="jiedaokou" name="街道口" district="洪山区" lng="114.357" lat="30.526" category="commercial" />
+    <Station id="guangbutun" name="广埠屯" district="洪山区" lng="114.368" lat="30.525" category="university" />
+    <Station id="huquan" name="虎泉" district="洪山区" lng="114.386" lat="30.512" category="normal" />
+    <Station id="guanggu_square" name="光谷广场" district="洪山区" lng="114.407" lat="30.506" category="commercial" />
+    <Station id="wuhan_east" name="武汉东站" district="洪山区" lng="114.424" lat="30.500" category="rail_hub" />
+    <Station id="wuhan_railway" name="武汉火车站" district="洪山区" lng="114.424" lat="30.608" category="rail_hub" />
+    <Station id="tieji_road" name="铁机路" district="洪山区" lng="114.368" lat="30.589" category="normal" />
+    <Station id="yuejiazui" name="岳家嘴" district="洪山区" lng="114.354" lat="30.579" category="transfer" />
+    <Station id="qingyuzui" name="青鱼嘴" district="武昌区" lng="114.346" lat="30.569" category="normal" />
+    <Station id="chuhan_street" name="楚河汉街" district="武昌区" lng="114.342" lat="30.559" category="commercial" />
+    <Station id="meiyuanxiaoqu" name="梅苑小区" district="武昌区" lng="114.334" lat="30.521" category="normal" />
+    <Station id="wuchang_railway" name="武昌火车站" district="武昌区" lng="114.316" lat="30.529" category="rail_hub" />
+    <Station id="shouyi_road" name="首义路" district="武昌区" lng="114.306" lat="30.525" category="normal" />
+    <Station id="fuxing_road" name="复兴路" district="武昌区" lng="114.299" lat="30.519" category="normal" />
+    <Station id="zhongjiacun" name="钟家村" district="汉阳区" lng="114.265" lat="30.543" category="commercial" />
+    <Station id="xujiapeng" name="徐家棚" district="武昌区" lng="114.335" lat="30.588" category="normal" />
+    <Station id="hubei_university" name="湖北大学" district="武昌区" lng="114.331" lat="30.573" category="university" />
+    <Station id="xinhe_street" name="新河街" district="武昌区" lng="114.322" lat="30.566" category="normal" />
+    <Station id="xiaodongmen" name="小东门" district="武昌区" lng="114.313" lat="30.542" category="normal" />
+    <Station id="ruian_street" name="瑞安街" district="武昌区" lng="114.313" lat="30.511" category="normal" />
+    <Station id="jianan_street" name="建安街" district="武昌区" lng="114.318" lat="30.497" category="normal" />
+    <Station id="hubei_univ_tech" name="湖工大" district="洪山区" lng="114.328" lat="30.478" category="university" />
+    <Station id="shengbo_hubeiribao" name="省博湖北日报" district="武昌区" lng="114.370" lat="30.562" category="landmark" />
+    <Station id="zhongnan_hospital" name="中南医院" district="武昌区" lng="114.361" lat="30.548" category="hospital" />
+    <Station id="wenzhi_street" name="文治街" district="洪山区" lng="114.337" lat="30.486" category="normal" />
+    <Station id="mahu" name="马湖" district="洪山区" lng="114.350" lat="30.468" category="normal" />
+  </Stations>
+</MetroDataset>

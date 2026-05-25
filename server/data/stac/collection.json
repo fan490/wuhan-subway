@@ -1,0 +1,38 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "wuhan-metro-network",
+  "title": "Wuhan Metro Network",
+  "description": "武汉地铁站点、线路、换乘关系和示意图坐标数据，服务于 WebGIS 课程项目。",
+  "license": "proprietary-course-demo",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [114.209, 30.468, 114.424, 30.784]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        ["2026-05-25T00:00:00Z", null]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/wuhan-metro-network.json",
+      "type": "application/geo+json",
+      "title": "武汉地铁网络数据项"
+    }
+  ]
+}

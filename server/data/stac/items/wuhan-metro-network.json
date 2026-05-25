@@ -1,0 +1,55 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "wuhan-metro-network-2026-course-demo",
+  "collection": "wuhan-metro-network",
+  "bbox": [114.209, 30.468, 114.424, 30.784],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [114.209, 30.468],
+        [114.424, 30.468],
+        [114.424, 30.784],
+        [114.209, 30.784],
+        [114.209, 30.468]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-05-25T00:00:00Z",
+    "city": "武汉市",
+    "crs": "EPSG:4326",
+    "course:theme": "WebGIS metro finder",
+    "course:data_model": "stations, lines, segments, transfer relationships"
+  },
+  "assets": {
+    "metro_json": {
+      "href": "../../wuhan-metro.json",
+      "type": "application/json",
+      "title": "武汉地铁网络 JSON 数据"
+    },
+    "metro_xml": {
+      "href": "../../wuhan-metro.xml",
+      "type": "application/xml",
+      "title": "武汉地铁网络 XML 数据"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "./wuhan-metro-network.json",
+      "type": "application/geo+json"
+    }
+  ]
+}

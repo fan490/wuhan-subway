@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Wuhan Metro Network Course Dataset",
+    "titleZh": "武汉地铁网络课程数据集",
+    "city": "武汉市",
+    "crs": "EPSG:4326",
+    "version": "2026-course-demo",
+    "description": "面向 WebGIS 课程项目整理的武汉地铁站点、线路和换乘关系示例数据。经纬度与线路位置用于课程演示和空间数据库建模。"
+  },
+  "lines": [
+    {
+      "id": "L2",
+      "name": "2号线",
+      "color": "#e85d3f",
+      "direction": "天河机场 - 佛祖岭",
+      "stations": [
+        "tianhe_airport",
+        "hankou_railway",
+        "zhongshan_park",
+        "jianghan_road",
+        "jiyuqiao",
+        "pangxiejia",
+        "xiaoguishan",
+        "hongshan_square",
+        "zhongnan_road",
+        "baotongsi",
+        "jiedaokou",
+        "guangbutun",
+        "huquan",
+        "guanggu_square",
+        "wuhan_east"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "4号线",
+      "color": "#43b85c",
+      "direction": "武汉火车站 - 柏林",
+      "stations": [
+        "wuhan_railway",
+        "tieji_road",
+        "yuejiazui",
+        "qingyuzui",
+        "chuhan_street",
+        "hongshan_square",
+        "zhongnan_road",
+        "meiyuanxiaoqu",
+        "wuchang_railway",
+        "shouyi_road",
+        "fuxing_road",
+        "zhongjiacun"
+      ]
+    },
+    {
+      "id": "L7",
+      "name": "7号线",
+      "color": "#f0bb2f",
+      "direction": "园博园北 - 青龙山地铁小镇",
+      "stations": [
+        "xujiapeng",
+        "hubei_university",
+        "xinhe_street",
+        "pangxiejia",
+        "xiaodongmen",
+        "wuchang_railway",
+        "ruian_street",
+        "jianan_street",
+        "hubei_univ_tech"
+      ]
+    },
+    {
+      "id": "L8",
+      "name": "8号线",
+      "color": "#25b6b6",
+      "direction": "金潭路 - 军运村",
+      "stations": [
+        "yuejiazui",
+        "shengbo_hubeiribao",
+        "zhongnan_hospital",
+        "hongshan_square",
+        "zhongnan_road",
+        "wuchang_railway",
+        "wenzhi_street",
+        "mahu"
+      ]
+    }
+  ],
+  "stations": [
+    { "id": "tianhe_airport", "name": "天河机场", "district": "黄陂区", "lng": 114.209, "lat": 30.784, "x": 100, "y": 80, "category": "airport_hub" },
+    { "id": "hankou_railway", "name": "汉口火车站", "district": "江汉区", "lng": 114.254, "lat": 30.618, "x": 190, "y": 190, "category": "rail_hub" },
+    { "id": "zhongshan_park", "name": "中山公园", "district": "江汉区", "lng": 114.268, "lat": 30.583, "x": 275, "y": 230, "category": "normal" },
+    { "id": "jianghan_road", "name": "江汉路", "district": "江汉区", "lng": 114.292, "lat": 30.579, "x": 365, "y": 226, "category": "commercial" },
+    { "id": "jiyuqiao", "name": "积玉桥", "district": "武昌区", "lng": 114.310, "lat": 30.562, "x": 450, "y": 305, "category": "normal" },
+    { "id": "pangxiejia", "name": "螃蟹岬", "district": "武昌区", "lng": 114.318, "lat": 30.551, "x": 482, "y": 365, "category": "transfer" },
+    { "id": "xiaoguishan", "name": "小龟山", "district": "武昌区", "lng": 114.323, "lat": 30.543, "x": 512, "y": 410, "category": "normal" },
+    { "id": "hongshan_square", "name": "洪山广场", "district": "武昌区", "lng": 114.336, "lat": 30.545, "x": 590, "y": 420, "category": "transfer" },
+    { "id": "zhongnan_road", "name": "中南路", "district": "武昌区", "lng": 114.339, "lat": 30.532, "x": 645, "y": 385, "category": "transfer" },
+    { "id": "baotongsi", "name": "宝通寺", "district": "武昌区", "lng": 114.344, "lat": 30.524, "x": 705, "y": 425, "category": "normal" },
+    { "id": "jiedaokou", "name": "街道口", "district": "洪山区", "lng": 114.357, "lat": 30.526, "x": 785, "y": 455, "category": "commercial" },
+    { "id": "guangbutun", "name": "广埠屯", "district": "洪山区", "lng": 114.368, "lat": 30.525, "x": 865, "y": 468, "category": "university" },
+    { "id": "huquan", "name": "虎泉", "district": "洪山区", "lng": 114.386, "lat": 30.512, "x": 940, "y": 520, "category": "normal" },
+    { "id": "guanggu_square", "name": "光谷广场", "district": "洪山区", "lng": 114.407, "lat": 30.506, "x": 1075, "y": 540, "category": "commercial" },
+    { "id": "wuhan_east", "name": "武汉东站", "district": "洪山区", "lng": 114.424, "lat": 30.500, "x": 1180, "y": 550, "category": "rail_hub" },
+    { "id": "wuhan_railway", "name": "武汉火车站", "district": "洪山区", "lng": 114.424, "lat": 30.608, "x": 1180, "y": 110, "category": "rail_hub" },
+    { "id": "tieji_road", "name": "铁机路", "district": "洪山区", "lng": 114.368, "lat": 30.589, "x": 920, "y": 175, "category": "normal" },
+    { "id": "yuejiazui", "name": "岳家嘴", "district": "洪山区", "lng": 114.354, "lat": 30.579, "x": 875, "y": 255, "category": "transfer" },
+    { "id": "qingyuzui", "name": "青鱼嘴", "district": "武昌区", "lng": 114.346, "lat": 30.569, "x": 810, "y": 315, "category": "normal" },
+    { "id": "chuhan_street", "name": "楚河汉街", "district": "武昌区", "lng": 114.342, "lat": 30.559, "x": 735, "y": 355, "category": "commercial" },
+    { "id": "meiyuanxiaoqu", "name": "梅苑小区", "district": "武昌区", "lng": 114.334, "lat": 30.521, "x": 610, "y": 455, "category": "normal" },
+    { "id": "wuchang_railway", "name": "武昌火车站", "district": "武昌区", "lng": 114.316, "lat": 30.529, "x": 565, "y": 515, "category": "rail_hub" },
+    { "id": "shouyi_road", "name": "首义路", "district": "武昌区", "lng": 114.306, "lat": 30.525, "x": 535, "y": 575, "category": "normal" },
+    { "id": "fuxing_road", "name": "复兴路", "district": "武昌区", "lng": 114.299, "lat": 30.519, "x": 505, "y": 635, "category": "normal" },
+    { "id": "zhongjiacun", "name": "钟家村", "district": "汉阳区", "lng": 114.265, "lat": 30.543, "x": 455, "y": 690, "category": "commercial" },
+    { "id": "xujiapeng", "name": "徐家棚", "district": "武昌区", "lng": 114.335, "lat": 30.588, "x": 620, "y": 215, "category": "normal" },
+    { "id": "hubei_university", "name": "湖北大学", "district": "武昌区", "lng": 114.331, "lat": 30.573, "x": 650, "y": 285, "category": "university" },
+    { "id": "xinhe_street", "name": "新河街", "district": "武昌区", "lng": 114.322, "lat": 30.566, "x": 610, "y": 325, "category": "normal" },
+    { "id": "xiaodongmen", "name": "小东门", "district": "武昌区", "lng": 114.313, "lat": 30.542, "x": 510, "y": 455, "category": "normal" },
+    { "id": "ruian_street", "name": "瑞安街", "district": "武昌区", "lng": 114.313, "lat": 30.511, "x": 555, "y": 615, "category": "normal" },
+    { "id": "jianan_street", "name": "建安街", "district": "武昌区", "lng": 114.318, "lat": 30.497, "x": 560, "y": 690, "category": "normal" },
+    { "id": "hubei_univ_tech", "name": "湖工大", "district": "洪山区", "lng": 114.328, "lat": 30.478, "x": 560, "y": 760, "category": "university" },
+    { "id": "shengbo_hubeiribao", "name": "省博湖北日报", "district": "武昌区", "lng": 114.370, "lat": 30.562, "x": 865, "y": 340, "category": "landmark" },
+    { "id": "zhongnan_hospital", "name": "中南医院", "district": "武昌区", "lng": 114.361, "lat": 30.548, "x": 790, "y": 385, "category": "hospital" },
+    { "id": "wenzhi_street", "name": "文治街", "district": "洪山区", "lng": 114.337, "lat": 30.486, "x": 665, "y": 700, "category": "normal" },
+    { "id": "mahu", "name": "马湖", "district": "洪山区", "lng": 114.350, "lat": 30.468, "x": 735, "y": 760, "category": "normal" }
+  ]
+}

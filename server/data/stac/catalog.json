@@ -1,0 +1,20 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Catalog",
+  "id": "wuhan-metro-course-catalog",
+  "title": "武汉地铁 WebGIS 课程项目 STAC 目录",
+  "description": "用于课程项目的数据源目录，按 STAC 规范组织武汉地铁网络示例数据。",
+  "links": [
+    {
+      "rel": "self",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./collection.json",
+      "type": "application/json",
+      "title": "Wuhan Metro Network Collection"
+    }
+  ]
+}

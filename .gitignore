@@ -1,0 +1,11 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+client/dist/
+server/uploads/
+server/test-data/
+server/generate_test_shp.py
+*.log
+.env
+.DS_Store
+Thumbs.db

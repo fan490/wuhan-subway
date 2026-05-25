@@ -4,8 +4,11 @@ import { ref } from 'vue'
 export const useMapGraphStore = defineStore('mapGraph', () => {
   const selectedStationId = ref(null)
   const selectedLineId = ref(null)
+  const fromStationId = ref(null)
+  const toStationId = ref(null)
   const routeStationIds = ref([])
   const routeSegmentKeys = ref([])
+  const routeInstructions = ref([])
   const source = ref(null)
 
   function selectStation(id, src = 'diagram') {
@@ -17,24 +20,49 @@ export const useMapGraphStore = defineStore('mapGraph', () => {
     selectedLineId.value = selectedLineId.value === id ? null : id
   }
 
+  function setFromStation(id) {
+    fromStationId.value = id
+  }
+
+  function setToStation(id) {
+    toStationId.value = id
+  }
+
+  function clearFromStation() {
+    fromStationId.value = null
+  }
+
+  function clearToStation() {
+    toStationId.value = null
+  }
+
   function setRoute(route) {
     routeStationIds.value = route?.stations?.map(station => station.id) || []
     routeSegmentKeys.value = route?.segments?.map(segment => `${segment.from}-${segment.to}-${segment.lineId}`) || []
+    routeInstructions.value = route?.instructions || []
   }
 
   function clearRoute() {
     routeStationIds.value = []
     routeSegmentKeys.value = []
+    routeInstructions.value = []
   }
 
   return {
     selectedStationId,
     selectedLineId,
+    fromStationId,
+    toStationId,
     routeStationIds,
     routeSegmentKeys,
+    routeInstructions,
     source,
     selectStation,
     selectLine,
+    setFromStation,
+    setToStation,
+    clearFromStation,
+    clearToStation,
     setRoute,
     clearRoute,
   }

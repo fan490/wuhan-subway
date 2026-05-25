@@ -1,9 +1,9 @@
 <template>
   <div class="app-shell">
-    <ControlBar @refresh="reloadKey++" />
+    <ControlBar @refresh="refreshMap" />
     <main class="workspace">
       <GraphPanel class="side-panel" :stations="stations" @route-built="currentRoute = $event" />
-      <MapPanel :key="reloadKey" class="map-panel" @network-loaded="stations = $event.stations" />
+      <MapPanel ref="mapPanel" class="map-panel" @network-loaded="stations = $event.stations" />
     </main>
   </div>
 </template>
@@ -16,5 +16,9 @@ import { ref } from 'vue'
 
 const stations = ref([])
 const currentRoute = ref(null)
-const reloadKey = ref(0)
+const mapPanel = ref(null)
+
+function refreshMap() {
+  mapPanel.value?.refresh()
+}
 </script>

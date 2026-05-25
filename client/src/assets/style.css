@@ -619,11 +619,9 @@ button:disabled {
 }
 
 .legend-line {
-  width: 28px;
-  height: 4px;
-  border-radius: 2px;
-  background: #f59e0b;
-  box-shadow: 0 0 0 3px rgba(17, 24, 39, .15);
+  width: 32px;
+  height: 0;
+  border-top: 4px dashed #f59e0b;
 }
 
 .legend-transfer {
@@ -651,40 +649,13 @@ button:disabled {
   background: #ef4444;
 }
 
-/* ── 健康检查 ── */
-.spinner-sm {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  border: 2px solid rgba(255, 255, 255, .3);
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: spin .5s linear infinite;
-  vertical-align: middle;
-  margin-right: 4px;
+/* ── 路径虚线流动动画 ── */
+.route-dash-line {
+  animation: dash-march .8s linear infinite;
 }
 
-.check-toast {
-  padding: 4px 12px;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  animation: toast-in .25s ease;
-}
-
-.check-toast.ok {
-  background: #d1fae5;
-  color: #065f46;
-}
-
-.check-toast.fail {
-  background: #fee2e2;
-  color: #991b1b;
-}
-
-@keyframes toast-in {
-  from { opacity: 0; transform: translateX(-8px); }
-  to { opacity: 1; transform: translateX(0); }
+@keyframes dash-march {
+  to { stroke-dashoffset: -20; }
 }
 
 /* ── 地图加载遮罩 ── */

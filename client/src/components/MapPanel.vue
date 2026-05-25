@@ -13,7 +13,7 @@
 
     <div class="map-legend">
       <div class="legend-item">
-        <span class="legend-line"></span> 路径方案
+        <span class="legend-line"></span> 路径方案（虚线）
       </div>
       <div class="legend-item">
         <span class="legend-transfer"></span> 换乘站
@@ -208,7 +208,7 @@ function renderRoute() {
   routeLayer.clearLayers()
   if (!store.routeStationIds.length) return
 
-  // 逐段绘制路径，支持换乘站不同颜色
+  // 逐段绘制路径：白发光 + 深色边框 + 线路色虚线芯 三层叠加
   const instructions = store.routeInstructions
   if (instructions.length) {
     for (const inst of instructions) {
@@ -216,20 +216,33 @@ function renderRoute() {
       const toStation = stationMap.value.get(inst.to)
       if (!fromStation || !toStation) continue
       const latlngs = [[fromStation.lat, fromStation.lng], [toStation.lat, toStation.lng]]
+      const lineColor = inst.color || '#f59e0b'
 
+      // 第1层：白色外发光
       L.polyline(latlngs, {
-        color: '#111827',
-        weight: 10,
-        opacity: 0.38,
+        color: '#ffffff',
+        weight: 16,
+        opacity: 0.55,
         lineCap: 'round',
         lineJoin: 'round',
       }).addTo(routeLayer)
+      // 第2层：深色描边
       L.polyline(latlngs, {
-        color: inst.color || '#f59e0b',
-        weight: 5,
-        opacity: 1,
+        color: '#1a1a2e',
+        weight: 8,
+        opacity: 0.75,
         lineCap: 'round',
         lineJoin: 'round',
+      }).addTo(routeLayer)
+      // 第3层：线路色虚线芯
+      L.polyline(latlngs, {
+        color: lineColor,
+        weight: 5,
+        opacity: 1,
+        dashArray: '14 6',
+        lineCap: 'round',
+        lineJoin: 'round',
+        className: 'route-dash-line',
       }).addTo(routeLayer)
     }
   } else {
@@ -237,20 +250,31 @@ function renderRoute() {
       .map(id => stationMap.value.get(id))
       .filter(Boolean)
       .map(station => [station.lat, station.lng])
-    L.polyline(latlngs, {
-      color: '#111827',
-      weight: 10,
-      opacity: 0.38,
-      lineCap: 'round',
-      lineJoin: 'round',
-    }).addTo(routeLayer)
-    L.polyline(latlngs, {
-      color: '#f59e0b',
-      weight: 5,
-      opacity: 1,
-      lineCap: 'round',
-      lineJoin: 'round',
-    }).addTo(routeLayer)
+    if (latlngs.length) {
+      L.polyline(latlngs, {
+        color: '#ffffff',
+        weight: 16,
+        opacity: 0.55,
+        lineCap: 'round',
+        lineJoin: 'round',
+      }).addTo(routeLayer)
+      L.polyline(latlngs, {
+        color: '#1a1a2e',
+        weight: 8,
+        opacity: 0.75,
+        lineCap: 'round',
+        lineJoin: 'round',
+      }).addTo(routeLayer)
+      L.polyline(latlngs, {
+        color: '#f59e0b',
+        weight: 5,
+        opacity: 1,
+        dashArray: '14 6',
+        lineCap: 'round',
+        lineJoin: 'round',
+        className: 'route-dash-line',
+      }).addTo(routeLayer)
+    }
   }
 
   // 换乘站标记

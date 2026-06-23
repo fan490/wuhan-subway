@@ -5,7 +5,7 @@
       <strong>武汉地铁查询系统</strong>
     </div>
     <div class="topbar-meta">
-      <button @click="$emit('refresh')">刷新数据</button>
+      <button class="clear-route-btn" @click="$emit('clear-route')">清除路线</button>
       <span class="status-pill">
         <i :class="['dot', status.pg ? 'on' : 'off']"></i>
         PG
@@ -22,7 +22,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { healthCheck } from '../api'
 
-defineEmits(['refresh'])
+defineEmits(['clear-route'])
 
 const status = ref({ pg: false, neo4j: false })
 let pollTimer = null

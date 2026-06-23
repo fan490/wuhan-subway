@@ -314,6 +314,21 @@ function clearAllEndpoints() {
   store.clearRoute()
 }
 
+function clearPlanningPanel() {
+  keyword.value = ''
+  searchSuggestions.value = []
+  showSuggestions.value = false
+  searchDone.value = false
+  fromInput.value = ''
+  toInput.value = ''
+  fromSuggestions.value = []
+  toSuggestions.value = []
+  showFromSuggestions.value = false
+  showToSuggestions.value = false
+  route.value = null
+  routeError.value = ''
+}
+
 // ── 路径规划 ──
 async function buildRoute() {
   routeError.value = ''
@@ -368,4 +383,6 @@ function closeAllDropdowns(e) {
 if (typeof window !== 'undefined') {
   window.addEventListener('click', closeAllDropdowns)
 }
+
+defineExpose({ clearPlanningPanel })
 </script>

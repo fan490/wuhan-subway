@@ -208,15 +208,15 @@ function renderRoute() {
   routeLayer.clearLayers()
   if (!store.routeStationIds.length) return
 
-  // 逐段绘制路径：白发光 + 深色边框 + 线路色虚线芯 三层叠加
-  const instructions = store.routeInstructions
-  if (instructions.length) {
-    for (const inst of instructions) {
-      const fromStation = stationMap.value.get(inst.from)
-      const toStation = stationMap.value.get(inst.to)
+  // 必须按 route.segments 逐站绘制，不能用 instructions 的汇总起终点直连。
+  const segments = store.routeSegments || []
+  if (segments.length) {
+    for (const segment of segments) {
+      const fromStation = stationMap.value.get(segment.from)
+      const toStation = stationMap.value.get(segment.to)
       if (!fromStation || !toStation) continue
       const latlngs = [[fromStation.lat, fromStation.lng], [toStation.lat, toStation.lng]]
-      const lineColor = inst.color || '#f59e0b'
+      const lineColor = segment.color || lineMap.value.get(segment.lineId)?.color || '#f59e0b'
 
       // 第1层：白色外发光
       L.polyline(latlngs, {

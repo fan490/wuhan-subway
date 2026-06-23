@@ -8,6 +8,7 @@ export const useMapGraphStore = defineStore('mapGraph', () => {
   const toStationId = ref(null)
   const routeStationIds = ref([])
   const routeSegmentKeys = ref([])
+  const routeSegments = ref([])
   const routeInstructions = ref([])
   const source = ref(null)
 
@@ -39,13 +40,24 @@ export const useMapGraphStore = defineStore('mapGraph', () => {
   function setRoute(route) {
     routeStationIds.value = route?.stations?.map(station => station.id) || []
     routeSegmentKeys.value = route?.segments?.map(segment => `${segment.from}-${segment.to}-${segment.lineId}`) || []
+    routeSegments.value = route?.segments || []
     routeInstructions.value = route?.instructions || []
   }
 
   function clearRoute() {
     routeStationIds.value = []
     routeSegmentKeys.value = []
+    routeSegments.value = []
     routeInstructions.value = []
+  }
+
+  function resetPlanning() {
+    selectedStationId.value = null
+    selectedLineId.value = null
+    fromStationId.value = null
+    toStationId.value = null
+    source.value = null
+    clearRoute()
   }
 
   return {
@@ -55,6 +67,7 @@ export const useMapGraphStore = defineStore('mapGraph', () => {
     toStationId,
     routeStationIds,
     routeSegmentKeys,
+    routeSegments,
     routeInstructions,
     source,
     selectStation,
@@ -65,5 +78,6 @@ export const useMapGraphStore = defineStore('mapGraph', () => {
     clearToStation,
     setRoute,
     clearRoute,
+    resetPlanning,
   }
 })

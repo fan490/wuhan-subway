@@ -2,6 +2,7 @@ node_modules/
 client/node_modules/
 server/node_modules/
 client/dist/
+client/dist-check/
 server/uploads/
 server/test-data/
 server/generate_test_shp.py
